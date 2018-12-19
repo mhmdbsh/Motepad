@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        android:id="@+id/searchBar"
+        style="@style/MaterialSearchBarLight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/search_border"
+        android:elevation="8dp"
+        app:mt_dividerColor="@color/gray"
+        app:mt_hint="Search"
+        app:mt_maxSuggestionsCount="10"
+        app:mt_placeholder="Search"
+        app:mt_speechMode="false" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp" />
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/fab_add"
+            android:layout_width="@dimen/fab_size_normal"
+            android:layout_height="@dimen/fab_size_normal"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="@dimen/material_component_floating_action_button_margin"
+            android:elevation="8dp"
+            android:src="@drawable/ic_add"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimaryDark" />
+
+
+    </FrameLayout>
+
+</LinearLayout>
